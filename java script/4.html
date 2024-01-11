@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Background Color</title>
+</head>
+<body>
+  <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+  <script>
+    // Array of different colors
+    const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33E9", "#33FFFF", "#FFFF33"];
+    let currentColorIndex = 0;
+
+    function changeBackgroundColor() {
+      // Change background color using the colors array
+      document.body.style.backgroundColor = colors[currentColorIndex];
+
+      // Increment the color index to move to the next color
+      currentColorIndex++;
+
+      // Reset color index to 0 if it reaches the end of the array
+      if (currentColorIndex === colors.length) {
+        currentColorIndex = 0;
+      }
+    }
+  </script>
+</body>
+</html>
